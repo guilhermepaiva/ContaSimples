@@ -1,8 +1,12 @@
 import graphene
 
-import conta.schema
+import contas.schema
+import usuarios.schema
 
-class Query(conta.schema.Query, graphene.ObjectType):
+class Query(usuarios.schema.Query, contas.schema.Query, graphene.ObjectType):
     pass
 
-schema = graphene.Schema(query=Query)
+class Mutation(usuarios.schema.Mutation, graphene.ObjectType):
+    pass
+
+schema = graphene.Schema(query=Query, mutation=Mutation)

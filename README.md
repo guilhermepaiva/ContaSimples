@@ -16,4 +16,41 @@ Também será implementado adicionalmente:
 
 ## Setup do projeto
 
+Esse projeto demonstra o backend simples de uma instituição financeira utilizando GraphQL e Python (Django + Graphene)
+
 Para rodar o projeto localmente, é preciso instalar algumas dependências. Vamos também utilizar um ambiente virtual e instalar todas as dependências dentro dele.
+
+Mas primeiro, é preciso clonar o projeto, digite a linha de código abaixo no terminal:
+```
+gh repo clone guilhermepaiva/ContaSimples
+```
+
+*Obs: recomendo o uso do ambiente virtual para isolar todas as dependências do projeto. Para isso, execute os seguintes comandos dentro da pasta do projeto clonado parar criar e ativar o ambiente virutal.*
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+
+**Instale as dependências**
+```
+pip install -r requirements.txt
+```
+
+**Crie o banco de dados**
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+
+**Faça o *mock* de alguns dados**
+```
+$ python manage.py shell
+>>> from contas.models import Conta 
+>>> Conta.objects.create(titular="Luiz",numero= "2525", saldo= 1900.0)
+>>> Conta.objects.create(titular="Mateus",numero= "8080", saldo= 3910.0)
+```
+
+**Inicie o servidor**
+```
+python manage.py runserver
+```

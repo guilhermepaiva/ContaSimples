@@ -78,6 +78,5 @@ query {
 
 Por exemplo, na query acima, temos o seguinte resultado:
 
-![alt text](../images/querySaldoPorConta.png?raw=true)
-
+![alt text](images/querySaldoPorConta.png?raw=true)
 

@@ -12,13 +12,8 @@ A ideia desse projeto é criar uma API GraphQL que implementa algumas situaçõe
 
 Também será implementado adicionalmente:
 
-<<<<<<< Updated upstream
 - [ ] A criação de um usuário (no caso uma empresa) que irá gerenciar uma conta;
 - [ ] A inserção de uma trasação em uma conta (utilizando mutations)
-=======
-6. A criação de um usuário (no caso uma empresa) que irá gerenciar uma conta;
-7. A inserção de uma trasação em uma conta (utilizando mutations)
->>>>>>> Stashed changes
 
 ## Setup do projeto
 
@@ -42,6 +37,8 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+Se posicione dentro da pasta *contasimples* para executar os seguintes passos.
+
 **Crie o banco de dados**
 ```
 python manage.py makemigrations
@@ -54,6 +51,8 @@ $ python manage.py shell
 >>> from contas.models import Conta 
 >>> Conta.objects.create(titular="Luiz",numero= "2525", saldo= 1900.0)
 >>> Conta.objects.create(titular="Mateus",numero= "8080", saldo= 3910.0)
+>>> Conta.objects.create(titular="Guilherme",numero= "0007", saldo= 700.90)
+>>> Conta.objects.create(titular="Veronica",numero= "1245", saldo=90870.15)
 ```
 
 **Inicie o servidor**
@@ -64,3 +63,9 @@ python manage.py runserver
 **Vamos fazer agora algumas requisições**
 
 Primeiro, vá no [localhost](http://localhost:8000/graphql/) ou utilize o [Insomnia](https://insomnia.rest/) para criar, pesquisar ou filtrar dados pelo GraphQL.
+
+- [ ] API que retorna o saldo de uma conta
+
+Para retornar o saldo de uma conta em específico, utilize a seguinte query:
+
+

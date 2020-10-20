@@ -4,15 +4,16 @@
 A ideia desse projeto é criar uma API GraphQL que implementa algumas situações relacionadas a uma instituição financeira. 
 
 **O projeto irá implementar:**
-1. Uma API/Query de login;
-2. Uma API/Query que retorna o saldo da conta;
-3. Uma API/Query de extrato da conta -> filtrar por Data de Transação e flag de "Crédito" e "Débito";
-4. Uma API/Query pra retornar o última transação realizada da empresa logada;
-5. Um endpoint para retornar transações agrupadas por cartão;
+- [ ] Uma API/Query de login;
+- [ ] Uma API/Query que retorna o saldo da conta;
+- [ ] Uma API/Query de extrato da conta -> filtrar por Data de Transação e flag de "Crédito" e "Débito";
+- [ ] Uma API/Query pra retornar o última transação realizada da empresa logada;
+- [ ] Um endpoint para retornar transações agrupadas por cartão;
 
 Também será implementado adicionalmente:
-6. A criação de um usuário (no caso uma empresa) que irá gerenciar uma conta;
-7. A inserção de uma trasação em uma conta (utilizando mutations)
+
+- [ ] A criação de um usuário (no caso uma empresa) que irá gerenciar uma conta;
+- [ ] A inserção de uma trasação em uma conta (utilizando mutations)
 
 ## Setup do projeto
 
@@ -54,3 +55,7 @@ $ python manage.py shell
 ```
 python manage.py runserver
 ```
+
+**Vamos fazer agora algumas requisições**
+
+Primeiro, vá no [localhost](http://localhost:8000/graphql/) ou utilize o [Insomnia](https://insomnia.rest/) para criar, pesquisar ou filtrar dados pelo GraphQL.

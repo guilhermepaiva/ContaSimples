@@ -78,6 +78,6 @@ query {
 
 Por exemplo, na query acima, temos o seguinte resultado:
 
-
+![alt text](https://github.com/guilhermepaiva/ContaSimples/tree/main/images/querySaldoPorConta.png?raw=true)
 
 

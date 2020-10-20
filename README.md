@@ -12,8 +12,13 @@ A ideia desse projeto é criar uma API GraphQL que implementa algumas situaçõe
 
 Também será implementado adicionalmente:
 
+<<<<<<< Updated upstream
 - [ ] A criação de um usuário (no caso uma empresa) que irá gerenciar uma conta;
 - [ ] A inserção de uma trasação em uma conta (utilizando mutations)
+=======
+6. A criação de um usuário (no caso uma empresa) que irá gerenciar uma conta;
+7. A inserção de uma trasação em uma conta (utilizando mutations)
+>>>>>>> Stashed changes
 
 ## Setup do projeto
 

@@ -40,9 +40,6 @@ class Query(graphene.ObjectType):
         return get_user_model().objects.all()
 
     def resolve_me(self, info):
-        print("*****")
-        print(info.context.user)
-        print("*****")
         user = info.context.user
         if user.is_anonymous:
             raise Exception('Você não está logado!')

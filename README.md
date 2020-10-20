@@ -64,8 +64,20 @@ python manage.py runserver
 
 Primeiro, vá no [localhost](http://localhost:8000/graphql/) ou utilize o [Insomnia](https://insomnia.rest/) para criar, pesquisar ou filtrar dados pelo GraphQL.
 
-- [ ] API que retorna o saldo de uma conta
+- [x] API que retorna o saldo de uma conta
 
 Para retornar o saldo de uma conta em específico, utilize a seguinte query:
+
+```
+query {
+  saldoPorConta (numero: <numero da conta de interesse>){
+    saldo
+  }
+}
+```
+
+Por exemplo, na query acima, temos o seguinte resultado:
+
+
 
 

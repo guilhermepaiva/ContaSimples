@@ -80,3 +80,20 @@ Por exemplo, na query acima, temos o seguinte resultado:
 
 ![alt text](images/querySaldoPorConta.png?raw=true)
 
+- [x] Criar uma transação
+
+Para criar uma transação é preciso realizar a seguinte query:
+
+```
+mutation {
+  createTransacao(data: "21/10/2020", tipo: "D", valor: 100.00){
+    data
+    tipo
+    valor
+  }
+}
+```
+
+O resultado pode ser visto abaixo:
+
+![alt text](images/queryCriarTransacao.png?raw=true)

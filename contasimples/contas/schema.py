@@ -19,6 +19,7 @@ class TransacaoType(DjangoObjectType):
 
 class Query(graphene.ObjectType):
     contas = graphene.List(ContaType)
+    #transacoes = Transacao.List(TransacaoType)
     saldo_por_conta = graphene.Field(ContaType, numero=graphene.String(required=True))
 
     def resolve_contas(self, info, **kwargs):
@@ -29,12 +30,7 @@ class Query(graphene.ObjectType):
             return Conta.objects.get(numero=numero)
         except Conta.DoesNotExist:
             return None
-    def resolve_transacao(self, info, **kwargs):
-        id = kwargs.get('id')
-
-        if id is not None:
-            return Transacao.objects.get(pk=id)
-
+    
     def resolve_transacoes(self, info, **kwargs):
         return Transacao.objects.all()
 
@@ -79,11 +75,12 @@ class CreateTransacao(graphene.Mutation):
             tipo=tipo,
             valor=valor,
         )
+        transacao.save()
 
         return CreateTransacao(
-            data=data,
-            tipo=tipo,
-            valor=valor,
+            data=transacao.data,
+            tipo=transacao.tipo,
+            valor=transacao.valor,
         )
 
 
